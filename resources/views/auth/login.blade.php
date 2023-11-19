@@ -61,7 +61,7 @@
                 <div class="form-group margin-top-20">
                     <div class="checkbox checkbox-theme">
                         <input type="checkbox" id="remember" name="remember">
-                        <label for="remember">Remember Me</label>
+                        <label for="remember">تذكرني</label>
                     </div>
                 </div>
 
