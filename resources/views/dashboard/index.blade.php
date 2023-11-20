@@ -47,21 +47,21 @@
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-users"></i><a href="{{ action('MembersController@index') }}">Members</a></div>
+                            <div class="panel-head"><i class="fa fa-users"></i><a href="{{ action('MembersController@index') }}">الأعضاء</a></div>
                             <div class="pull-right"><a href="{{ action('MembersController@create') }}" class="btn-sm btn-primary active" role="button"><i
-                                            class="fa fa-user-plus"></i> Add</a></div>
+                                            class="fa fa-user-plus"></i> اضافة</a></div>
                         </div>
 
                         <div class="panel-body with-nav-tabs">
                             <!-- Tabs Heads -->
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#expiring" data-toggle="tab">Expiring<span
+                                <li class="active"><a href="#expiring" data-toggle="tab">على وشك الانتهاء<span
                                                 class="label label-warning margin-left-5">{{ $expiringCount }}</span></a></li>
-                                <li><a href="#expired" data-toggle="tab">Expired<span class="label label-danger margin-left-5">{{ $expiredCount }}</span></a>
+                                <li><a href="#expired" data-toggle="tab">الاشتراكات المنتهية<span class="label label-danger margin-left-5">{{ $expiredCount }}</span></a>
                                 </li>
-                                <li><a href="#birthdays" data-toggle="tab">Birthdays<span class="label label-success margin-left-5">{{ $birthdayCount }}</span></a>
+                                <li><a href="#birthdays" data-toggle="tab">أعياد الميلاد<span class="label label-success margin-left-5">{{ $birthdayCount }}</span></a>
                                 </li>
-                                <li><a href="#recent" data-toggle="tab">Recent</a></li>
+                                <li><a href="#recent" data-toggle="tab">الحديثة</a></li>
                             </ul>
 
                             <!-- Tab Content -->
@@ -92,16 +92,16 @@
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-phone"></i><a href="{{ action('EnquiriesController@index') }}">Enquiries</a></div>
+                            <div class="panel-head"><i class="fa fa-phone"></i><a href="{{ action('EnquiriesController@index') }}">الأعضاء المحتملين</a></div>
                             <div class="pull-right"><a href="{{ action('EnquiriesController@create') }}" class="btn-sm btn-primary active" role="button"><i
-                                            class="fa fa-phone"></i> Add</a></div>
+                                            class="fa fa-phone"></i> اضافة</a></div>
                         </div>
 
                         <div class="panel-body with-nav-tabs">
                             <!-- Tabs Heads -->
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#enquiries" data-toggle="tab">Enquiries</a></li>
-                                <li><a href="#reminders" data-toggle="tab">Reminders<span class="label label-warning margin-left-5">{{ $reminderCount }}</span></a>
+                                <li class="active"><a href="#enquiries" data-toggle="tab">الأعضاء المحتملين</a></li>
+                                <li><a href="#reminders" data-toggle="tab">التذكيرات<span class="label label-warning margin-left-5">{{ $reminderCount }}</span></a>
                                 </li>
                             </ul>
 
@@ -128,17 +128,17 @@
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-inr"></i><a href="{{ action('ExpensesController@index') }}">Expenses</a></div>
+                            <div class="panel-head"><i class="fa fa-inr"></i><a href="{{ action('ExpensesController@index') }}">المصروفات</a></div>
                             <div class="pull-right"><a href="{{ action('ExpensesController@create') }}" class="btn-sm btn-primary active" role="button">
-                                    <i class="fa fa-inr"></i> Add</a>
+                                    <i class="fa fa-inr"></i> اضافة </a>
                             </div>
                         </div>
 
                         <div class="panel-body with-nav-tabs">
                             <!-- Tabs Heads -->
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#due" data-toggle="tab">Due</a></li>
-                                <li><a href="#outstanding" data-toggle="tab">Outstanding</a></li>
+                                <li class="active"><a href="#due" data-toggle="tab">المتبقية</a></li>
+                                <li><a href="#outstanding" data-toggle="tab">المستحقة قريبا</a></li>
                             </ul>
 
                             <!-- Tab Content -->
@@ -159,17 +159,17 @@
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>Cheques</div>
+                            <div class="panel-head"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>الشيكات</div>
                         </div>
 
                         <div class="panel-body with-nav-tabs">
                             <!-- Tabs Heads -->
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#recieved" data-toggle="tab">Recieved<span
+                                <li class="active"><a href="#recieved" data-toggle="tab">المستلمة<span
                                                 class="label label-warning margin-left-5">{{ $recievedChequesCount }}</span></a></li>
-                                <li><a href="#deposited" data-toggle="tab">Deposited<span
+                                <li><a href="#deposited" data-toggle="tab">المودعة<span
                                                 class="label label-primary margin-left-5">{{ $depositedChequesCount }}</span></a></li>
-                                <li><a href="#bounced" data-toggle="tab">Bounced<span class="label label-danger margin-left-5">{{ $bouncedChequesCount }}</span></a>
+                                <li><a href="#bounced" data-toggle="tab">المرفوضة<span class="label label-danger margin-left-5">{{ $bouncedChequesCount }}</span></a>
                                 </li>
                             </ul>
 
@@ -199,7 +199,7 @@
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-comments-o"></i>SMS Log</div>
+                            <div class="panel-head"><i class="fa fa-comments-o"></i>سجل الرسائل النصية</div>
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -220,7 +220,7 @@
                                                 <div class="clearfix"></div>
 
                                                 <div class="pull-left">
-                                                    <div class="display-block color-light-blue-50 font-weight-600">SMS balance</div>
+                                                    <div class="display-block color-light-blue-50 font-weight-600">رصيد الرسائل النصية</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -229,7 +229,7 @@
                                 @if($smsRequestSetting == 0)
                                     <div class="col-lg-7">
                                         <button class="btn btn-labeled btn-success pull-right margin-top-20" data-toggle="modal" data-target="#smsRequestModal"
-                                                data-id="smsRequestModal"><span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Request more sms
+                                                data-id="smsRequestModal"><span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>طلب المزيد من الرسائل النصية
                                         </button>
                                     </div>
                                 @endif
@@ -242,7 +242,7 @@
                 <div class="col-lg-6">
                     <div class="panel bg-white">
                         <div class="panel-title">
-                            <div class="panel-head">Members Per Plan</div>
+                            <div class="panel-head">المشتركين حسب خطة الاشتراك</div>
                         </div>
                         <div class="panel-body padding-top-10">
                             @if(!empty($membersPerPlan))
@@ -262,7 +262,7 @@
                 <div class="col-lg-12">
                     <div class="panel bg-white">
                         <div class="panel-title bg-transparent no-border">
-                            <div class="panel-head">Registration Trend</div>
+                            <div class="panel-head">التسجيل حسب الشهر</div>
                         </div>
                         <div class="panel-body no-padding-top">
                             <div id="gymie-registrations-trend" class="chart"></div>
@@ -280,7 +280,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Confirm request new sms pack</h4>
+                            <h4 class="modal-title">طلب المزيد من الرسائل النصية</h4>
                         </div>
                         <div class="modal-body">
                             {!! Form::Open(['action' => 'DashboardController@smsRequest']) !!}

@@ -47,7 +47,7 @@
 <body class="fixed-leftside fixed-header">
 <!-- BEGIN HEADER -->
 <header class="hidden-print">
-    <span class="logo">Gymie</span>
+    <span class="logo">Smart Gym</span>
     <nav class="navbar navbar-static-top">
         <a href="#" class="navbar-btn sidebar-toggle">
             <span class="icon-bar"></span>
@@ -79,23 +79,23 @@
             </div>
             <!-- END RPOFILE -->
             <!-- BEGIN NAV -->
-            <div class="title">Navigation</div>
+            <div class="title">التنقل</div>
             <ul class="nav-sidebar">
                 <li class="{{ Utilities::setActiveMenu('dashboard*') }}">
                     <a href="{{ action('DashboardController@index') }}">
-                        <i class="ion-home"></i> <span>Dashboard</span>
+                        <i class="ion-home"></i> <span>لوحة البيانات</span>
                     </a>
                 </li>
 
                 @permission(['manage-gymie','manage-enquiries','view-enquiry'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('enquiries*',true) }}">
                     <a href="#">
-                        <i class="ion-ios-telephone"></i> <span>Enquiries</span>
+                        <i class="ion-ios-telephone"></i> <span>الاعضاء المحتملين</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('enquiries/all') }}"><a href="{{ action('EnquiriesController@index') }}">All Enquiries</a></li>
+                        <li class="{{ Utilities::setActiveMenu('enquiries/all') }}"><a href="{{ action('EnquiriesController@index') }}">كل الاعضاء المحتملين</a></li>
                         @permission(['manage-gymie','manage-enquiries','add-enquiry'])
-                        <li class="{{ Utilities::setActiveMenu('enquiries/create') }}"><a href="{{ action('EnquiriesController@create') }}">Add Enquiry</a></li>
+                        <li class="{{ Utilities::setActiveMenu('enquiries/create') }}"><a href="{{ action('EnquiriesController@create') }}">اضافة عضو محتمل</a></li>
                         @endpermission
                     </ul>
                 </li>
@@ -104,15 +104,15 @@
                 @permission(['manage-gymie','manage-members','view-member'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('members*',true) }}">
                     <a href="#">
-                        <i class="ion-person-add"></i> <span>Members</span>
+                        <i class="ion-person-add"></i> <span>الاعضاء</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('members/all') }}"><a href="{{ action('MembersController@index') }}">All Members</a></li>
+                        <li class="{{ Utilities::setActiveMenu('members/all') }}"><a href="{{ action('MembersController@index') }}">كل الأعضاء</a></li>
                         @permission(['manage-gymie','manage-members','add-member'])
-                        <li class="{{ Utilities::setActiveMenu('members/create') }}"><a href="{{ action('MembersController@create') }}">Add Member</a></li>
+                        <li class="{{ Utilities::setActiveMenu('members/create') }}"><a href="{{ action('MembersController@create') }}">اضافة عضو جديد</a></li>
                         @endpermission
-                        <li class="{{ Utilities::setActiveMenu('members/active') }}"><a href="{{ action('MembersController@active') }}">Active Members</a></li>
-                        <li class="{{ Utilities::setActiveMenu('members/inactive') }}"><a href="{{ action('MembersController@inactive') }}">Inactive Members</a>
+                        <li class="{{ Utilities::setActiveMenu('members/active') }}"><a href="{{ action('MembersController@active') }}">الأعضاء النشطين</a></li>
+                        <li class="{{ Utilities::setActiveMenu('members/inactive') }}"><a href="{{ action('MembersController@inactive') }}">الأعضاء المعطلين</a>
                         </li>
                     </ul>
                 </li>
@@ -121,12 +121,12 @@
                 @permission(['manage-gymie','manage-payments','view-payment'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('payments*',true) }}">
                     <a href="#">
-                        <i class="ion-cash"></i> <span>Payments</span>
+                        <i class="ion-cash"></i> <span>المدفوعات</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('payments/all') }}"><a href="{{ action('PaymentsController@index') }}">All Payments</a></li>
+                        <li class="{{ Utilities::setActiveMenu('payments/all') }}"><a href="{{ action('PaymentsController@index') }}">كل المدغوعات</a></li>
                         @permission(['manage-gymie','manage-payments','add-payment'])
-                        <li class="{{ Utilities::setActiveMenu('payments/create') }}"><a href="{{ action('PaymentsController@create') }}">Add Payment</a></li>
+                        <li class="{{ Utilities::setActiveMenu('payments/create') }}"><a href="{{ action('PaymentsController@create') }}">اضافة دفع</a></li>
                         @endpermission
                     </ul>
                 </li>
@@ -135,19 +135,18 @@
                 @permission(['manage-gymie','manage-subscriptions','view-subscription'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('subscriptions*',true) }}">
                     <a href="#">
-                        <i class="ion-android-checkbox-outline"></i> <span>Subscriptions</span>
+                        <i class="ion-android-checkbox-outline"></i> <span>الاشتراكات</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('subscriptions/all') }}"><a href="{{ action('SubscriptionsController@index') }}">All
-                                Subscriptions</a></li>
+                        <li class="{{ Utilities::setActiveMenu('subscriptions/all') }}"><a href="{{ action('SubscriptionsController@index') }}">
+                                كل الاشتراكات</a></li>
                         @permission(['manage-gymie','manage-subscriptions','add-subscription'])
-                        <li class="{{ Utilities::setActiveMenu('subscriptions/create') }}"><a href="{{ action('SubscriptionsController@create') }}">Add
-                                Subscription</a></li>
+                        <li class="{{ Utilities::setActiveMenu('subscriptions/create') }}"><a href="{{ action('SubscriptionsController@create') }}">
+                                اضافة اشتراك جديد</a></li>
                         @endpermission
-                        <li class="{{ Utilities::setActiveMenu('subscriptions/expiring') }}"><a href="{{ action('SubscriptionsController@expiring') }}">Expiring
-                                Subscriptions</a></li>
-                        <li class="{{ Utilities::setActiveMenu('subscriptions/expired') }}"><a href="{{ action('SubscriptionsController@expired') }}">Expired
-                                Subscriptions</a></li>
+                        <li class="{{ Utilities::setActiveMenu('subscriptions/expiring') }}"><a href="{{ action('SubscriptionsController@expiring') }}">الاشتراكات وشك الانتهاء</a></li>
+                        <li class="{{ Utilities::setActiveMenu('subscriptions/expired') }}"><a href="{{ action('SubscriptionsController@expired') }}">
+                                الاشتراكات المنتهية</a></li>
                     </ul>
                 </li>
                 @endpermission
@@ -169,13 +168,13 @@
                 @permission(['manage-gymie','manage-sms'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('sms*',true) }}">
                     <a href="#">
-                        <i class="ion-ios-paper"></i> <span>SMS</span>
+                        <i class="ion-ios-paper"></i> <span>الرسائل النصية</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('sms/triggers') }}"><a href="{{ action('SmsController@triggersIndex') }}">Triggers</a></li>
-                        <li class="{{ Utilities::setActiveMenu('sms/events') }}"><a href="{{ action('SmsController@eventsIndex') }}">Schedule message</a></li>
-                        <li class="{{ Utilities::setActiveMenu('sms/send') }}"><a href="{{ action('SmsController@send') }}">Send message</a></li>
-                        <li class="{{ Utilities::setActiveMenu('sms/log') }}"><a href="{{ action('SmsController@logIndex') }}">Log</a></li>
+                        <li class="{{ Utilities::setActiveMenu('sms/triggers') }}"><a href="{{ action('SmsController@triggersIndex') }}">المسببات</a></li>
+                        <li class="{{ Utilities::setActiveMenu('sms/events') }}"><a href="{{ action('SmsController@eventsIndex') }}">جدولة رسالة</a></li>
+                        <li class="{{ Utilities::setActiveMenu('sms/send') }}"><a href="{{ action('SmsController@send') }}">ارسال رسالة</a></li>
+                        <li class="{{ Utilities::setActiveMenu('sms/log') }}"><a href="{{ action('SmsController@logIndex') }}">سجل الرسائل</a></li>
                     </ul>
                 </li>
                 @endpermission
@@ -183,17 +182,16 @@
                 @permission(['manage-gymie','manage-invoices','view-invoice'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('invoices*',true) }}">
                     <a href="#">
-                        <i class="ion-ios-paper"></i> <span>Invoices</span>
+                        <i class="ion-ios-paper"></i> <span>الفواتير</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('invoices/all') }}"><a href="{{ action('InvoicesController@index') }}">All Invoices</a></li>
-                        <li class="{{ Utilities::setActiveMenu('invoices/paid') }}"><a href="{{ action('InvoicesController@paid') }}">Paid Invoices</a></li>
-                        <li class="{{ Utilities::setActiveMenu('invoices/unpaid') }}"><a href="{{ action('InvoicesController@unpaid') }}">Unpaid Invoices</a>
+                        <li class="{{ Utilities::setActiveMenu('invoices/all') }}"><a href="{{ action('InvoicesController@index') }}">كل الفواتير</a></li>
+                        <li class="{{ Utilities::setActiveMenu('invoices/paid') }}"><a href="{{ action('InvoicesController@paid') }}">الفواتير المدفوعة</a></li>
+                        <li class="{{ Utilities::setActiveMenu('invoices/unpaid') }}"><a href="{{ action('InvoicesController@unpaid') }}">الفواتير غير المدفوعة</a>
                         </li>
-                        <li class="{{ Utilities::setActiveMenu('invoices/partial') }}"><a href="{{ action('InvoicesController@partial') }}">Partial Invoices</a>
+                        <li class="{{ Utilities::setActiveMenu('invoices/partial') }}"><a href="{{ action('InvoicesController@partial') }}">الفواتير المدفوعة جزئيا</a>
                         </li>
-                        <li class="{{ Utilities::setActiveMenu('invoices/overpaid') }}"><a href="{{ action('InvoicesController@overpaid') }}">Overpaid
-                                Invoices</a></li>
+                        <li class="{{ Utilities::setActiveMenu('invoices/overpaid') }}"><a href="{{ action('InvoicesController@overpaid') }}">الفواتير المدفوعة اكثر  من المطلوب</a></li>
                     </ul>
                 </li>
                 @endpermission
@@ -201,20 +199,18 @@
                 @permission(['manage-gymie','manage-expenses','view-expense'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('expenses*',true) }}">
                     <a href="#">
-                        <i class="fa fa-inr"></i> <span>Expenses</span>
+                        <i class="fa fa-inr"></i> <span>المصروفات</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('expenses/all') }}"><a href="{{ action('ExpensesController@index') }}">All Expenses</a></li>
+                        <li class="{{ Utilities::setActiveMenu('expenses/all') }}"><a href="{{ action('ExpensesController@index') }}">كل المصروفات</a></li>
                         @permission(['manage-gymie','manage-expenses','add-expense'])
-                        <li class="{{ Utilities::setActiveMenu('expenses/create') }}"><a href="{{ action('ExpensesController@create') }}">Add Expense</a></li>
+                        <li class="{{ Utilities::setActiveMenu('expenses/create') }}"><a href="{{ action('ExpensesController@create') }}">اضافة مصروفات</a></li>
                         @endpermission
                         @permission(['manage-gymie','manage-expenseCategories','view-expenseCategory'])
-                        <li class="{{ Utilities::setActiveMenu('expenses/categories/all') }}"><a href="{{ action('ExpenseCategoriesController@index') }}">Expense
-                                Categories</a></li>
+                        <li class="{{ Utilities::setActiveMenu('expenses/categories/all') }}"><a href="{{ action('ExpenseCategoriesController@index') }}">انواع المصروفات</a></li>
                         @endpermission
                         @permission(['manage-gymie','manage-expenseCategories','add-expenseCategory'])
-                        <li class="{{ Utilities::setActiveMenu('expenses/categories/create') }}"><a href="{{ action('ExpenseCategoriesController@create') }}">Add
-                                Category</a></li>
+                        <li class="{{ Utilities::setActiveMenu('expenses/categories/create') }}"><a href="{{ action('ExpenseCategoriesController@create') }}">اضافة نوع مصروفات</a></li>
                         @endpermission
                     </ul>
                 </li>
@@ -223,19 +219,19 @@
                 @permission(['manage-gymie','manage-plans','view-plan'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('plans*',true) }}">
                     <a href="#">
-                        <i class="ion-compose"></i> <span>Plans</span>
+                        <i class="ion-compose"></i> <span>خطط الاشتراك</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('plans/all') }}"><a href="{{ action('PlansController@index') }}">All Plans</a></li>
+                        <li class="{{ Utilities::setActiveMenu('plans/all') }}"><a href="{{ action('PlansController@index') }}">كل الخطط</a></li>
                         @permission(['manage-gymie','manage-plans','add-plan'])
-                        <li class="{{ Utilities::setActiveMenu('plans/create') }}"><a href="{{ action('PlansController@create') }}">Add Plan</a></li>
+                        <li class="{{ Utilities::setActiveMenu('plans/create') }}"><a href="{{ action('PlansController@create') }}">اضافة خطة اشتراك</a></li>
                         @endpermission
                         @permission(['manage-gymie','manage-services','view-service'])
-                        <li class="{{ Utilities::setActiveMenu('plans/services/all') }}"><a href="{{ action('ServicesController@index') }}">Gym Services</a>
+                        <li class="{{ Utilities::setActiveMenu('plans/services/all') }}"><a href="{{ action('ServicesController@index') }}">خدمات الجيم</a>
                         </li>
                         @endpermission
                         @permission(['manage-gymie','manage-services','add-service'])
-                        <li class="{{ Utilities::setActiveMenu('plans/services/create') }}"><a href="{{ action('ServicesController@create') }}">Add Service</a>
+                        <li class="{{ Utilities::setActiveMenu('plans/services/create') }}"><a href="{{ action('ServicesController@create') }}">اضافة خدمة</a>
                         </li>
                         @endpermission
                     </ul>
