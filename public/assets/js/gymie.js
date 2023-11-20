@@ -175,12 +175,12 @@ var gymie = (function ($) {
 
 			$('.gymie-daterangepicker').daterangepicker({
 				ranges: {
-					'Today': [moment(), moment()],
-					'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-					'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-					'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-					'This Month': [moment().startOf('month'), moment().endOf('month')],
-					'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+					'اليوم': [moment(), moment()],
+					'البارحة': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+					'اخر 7 ايام': [moment().subtract(6, 'days'), moment()],
+					'اخر 30 يوم': [moment().subtract(29, 'days'), moment()],
+					'الشهر الحالي': [moment().startOf('month'), moment().endOf('month')],
+					'الشهر السابق': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
 				}
 			}, cb);
 		},
