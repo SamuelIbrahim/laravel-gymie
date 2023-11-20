@@ -245,18 +245,17 @@
                 @permission(['manage-gymie','manage-users'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('user*',true) }}">
                     <a href="#">
-                        <i class="fa fa-users"></i> <span>Users</span>
+                        <i class="fa fa-users"></i> <span>المستخدمين</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('user') }}"><a href="{{ action('AclController@userIndex') }}"><i class="fa fa-upload"></i> All
-                                Users</a></li>
+                        <li class="{{ Utilities::setActiveMenu('user') }}"><a href="{{ action('AclController@userIndex') }}"><i class="fa fa-upload"></i> كل المستخدمين</a></li>
                         <li class="{{ Utilities::setActiveMenu('user/create') }}"><a href="{{ action('AclController@createUser') }}"><i class="fa fa-list"></i>
-                                Add new user</a></li>
+                                اضافة مستخدم جديد</a></li>
                         <li class="{{ Utilities::setActiveMenu('user/role') }}"><a href="{{ action('AclController@roleIndex') }}"><i class="fa fa-list"></i>
-                                Roles</a></li>
+                                الأدوار</a></li>
                         @role('Gymie')
                         <li class="{{ Utilities::setActiveMenu('user/permission') }}"><a href="{{ action('AclController@permissionIndex') }}"><i
-                                        class="fa fa-list"></i> Permissions</a></li>
+                                        class="fa fa-list"></i> الصلاحيات</a></li>
                         @endrole
                     </ul>
                 </li>
@@ -265,7 +264,7 @@
                 @permission(['manage-gymie','manage-settings'])
                 <li class="{{ Utilities::setActiveMenu('settings*') }}">
                     <a href="{{ action('SettingsController@edit') }}">
-                        <i class="fa fa-cogs fa-2x"></i> <span>Settings</span>
+                        <i class="fa fa-cogs fa-2x"></i> <span>الاعدادات</span>
                     </a>
                 </li>
                 @endpermission
