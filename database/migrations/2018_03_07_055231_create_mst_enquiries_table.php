@@ -21,7 +21,6 @@ class CreateMstEnquiriesTable extends Migration
             $table->boolean('status')->comment('0 = Lost , 1 = Lead  , 2 =Member');
             $table->string('contact', 50);
             $table->string('gender', 50);
-            $table->integer('pin_code');
             $table->string('occupation', 50);
             $table->date('start_by');
             $table->string('interested_in', 50);

@@ -8,8 +8,8 @@ $(document).ready(function() {
 									message: 'The input is not a valid number'
 								},
 								stringLength: {
-			                        max: 10,
-			                        message: 'It must be less than 10 characters'
+			                        max: 11,
+			                        message: 'It must be less than 11 characters'
 			                    }
 							}
 						}

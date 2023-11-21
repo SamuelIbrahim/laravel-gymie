@@ -19,18 +19,11 @@ class Member extends Model implements HasMediaConversions
         'member_code',
         'name',
         'DOB',
-        'email',
-        'address',
         'status',
-        'proof_name',
         'gender',
         'contact',
         'emergency_contact',
         'health_issues',
-        'pin_code',
-        'occupation',
-        'aim',
-        'source',
         'created_by',
         'updated_by',
     ];
@@ -40,7 +33,6 @@ class Member extends Model implements HasMediaConversions
     protected $searchableColumns = [
         'member_code' => 20,
         'name' => 20,
-        'email' => 20,
         'contact' => 20,
     ];
 

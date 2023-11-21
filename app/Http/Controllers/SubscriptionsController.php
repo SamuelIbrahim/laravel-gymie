@@ -30,7 +30,7 @@ class SubscriptionsController extends Controller
         $count = $subscriptionTotal->count();
 
         if (! $request->has('drp_start') or ! $request->has('drp_end')) {
-            $drp_placeholder = 'Select daterange filter';
+            $drp_placeholder = 'اختر التاريخ';
         } else {
             $drp_placeholder = $request->drp_start.' - '.$request->drp_end;
         }
@@ -46,7 +46,7 @@ class SubscriptionsController extends Controller
         $count = $expirings->total();
 
         if (! $request->has('drp_start') or ! $request->has('drp_end')) {
-            $drp_placeholder = 'Select daterange filter';
+            $drp_placeholder = 'اختر التاريخ';
         } else {
             $drp_placeholder = $request->drp_start.' - '.$request->drp_end;
         }
@@ -62,7 +62,7 @@ class SubscriptionsController extends Controller
         $count = $allExpired->total();
 
         if (! $request->has('drp_start') or ! $request->has('drp_end')) {
-            $drp_placeholder = 'Select daterange filter';
+            $drp_placeholder = 'اختر التاريخ';
         } else {
             $drp_placeholder = $request->drp_start.' - '.$request->drp_end;
         }

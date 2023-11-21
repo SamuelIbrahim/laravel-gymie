@@ -24,7 +24,7 @@ class PaymentsController extends Controller
         $count = $paymentTotal->sum('payment_amount');
 
         if (! $request->has('drp_start') or ! $request->has('drp_end')) {
-            $drp_placeholder = 'Select daterange filter';
+            $drp_placeholder = 'اختر التاريخ';
         } else {
             $drp_placeholder = $request->drp_start.' - '.$request->drp_end;
         }

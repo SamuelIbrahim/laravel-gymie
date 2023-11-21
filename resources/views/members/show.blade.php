@@ -129,15 +129,6 @@
                                                 </div>
                                             </div>
 
-                                            <hr class="margin-top-0 margin-bottom-10">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <label>Email</label>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <span class="show-data">{{$member->email}}</span>
-                                                </div>
-                                            </div>
 
                                             <hr class="margin-top-0 margin-bottom-10">
                                             <div class="row">
@@ -149,14 +140,6 @@
                                                 </div>
                                             </div>
                                             <hr class="margin-top-0 margin-bottom-10">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <label>Emergency Contact</label>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <span class="show-data">{{$member->emergency_contact}}</span>
-                                                </div>
-                                            </div>
 
 
                                         </div>  <!-- End of outer Row -->
@@ -201,32 +184,8 @@
                                                         </div>
                                                     </div>
                                                     <hr class="margin-top-0 margin-bottom-10">
-                                                    <div class="row">
-                                                        <div class="col-sm-4">
-                                                            <label>Aim</label>
-                                                        </div>
-                                                        <div class="col-sm-8">
-                                                            <span class="show-data">{{Utilities::getAim ($member->aim)}}</span>
-                                                        </div>
-                                                    </div>
                                                     <hr class="margin-top-0 margin-bottom-10">
-                                                    <div class="row">
-                                                        <div class="col-sm-4">
-                                                            <label>ID Proof</label>
-                                                        </div>
-                                                        <div class="col-sm-8">
-                                                            <span class="show-data">{{$member->proof_name}}</span>
-                                                        </div>
-                                                    </div>
                                                     <hr class="margin-top-0 margin-bottom-10">
-                                                    <div class="row">
-                                                        <div class="col-sm-4">
-                                                            <label>Address</label>
-                                                        </div>
-                                                        <div class="col-sm-8">
-                                                            <span class="show-data">{{$member->address}}</span>
-                                                        </div>
-                                                    </div>
                                                     <hr class="margin-top-0 margin-bottom-10">
                                                     <div class="row">
                                                         <div class="col-sm-4">

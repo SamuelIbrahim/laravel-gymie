@@ -128,8 +128,7 @@ class MembersController extends Controller
     public function store(Request $request)
     {
         // Member Model Validation
-        $this->validate($request, ['email' => 'unique:mst_members,email',
-                                   'contact' => 'unique:mst_members,contact',
+        $this->validate($request, ['contact' => 'unique:mst_members,contact',
                                    'member_code' => 'unique:mst_members,member_code', ]);
 
         // Start Transaction
@@ -141,18 +140,10 @@ class MembersController extends Controller
                                     'DOB'=> $request->DOB,
                                     'gender'=> $request->gender,
                                     'contact'=> $request->contact,
-                                    'emergency_contact'=> $request->emergency_contact,
                                     'health_issues'=> $request->health_issues,
-                                    'email'=> $request->email,
-                                    'address'=> $request->address,
                                     'member_id'=> $request->member_id,
-                                    'proof_name'=> $request->proof_name,
                                     'member_code'=> $request->member_code,
-                                    'status'=> $request->status,
-                                    'pin_code'=> $request->pin_code,
-                                    'occupation'=> $request->occupation,
-                                    'aim'=> $request->aim,
-                                    'source'=> $request->source, ];
+                                    'status'=> $request->status, ];
 
             $member = new Member($memberData);
             $member->createdBy()->associate(Auth::user());
@@ -164,9 +155,6 @@ class MembersController extends Controller
                 $member->addMedia($request->file('photo'))->usingFileName('profile_'.$member->id.'.'.$request->photo->getClientOriginalExtension())->toCollection('profile');
             }
 
-            if ($request->hasFile('proof_photo')) {
-                $member->addMedia($request->file('proof_photo'))->usingFileName('proof_'.$member->id.'.'.$request->proof_photo->getClientOriginalExtension())->toCollection('proof');
-            }
 
             // Helper function for calculating payment status
             $invoice_total = $request->admission_amount + $request->subscription_amount + $request->taxes_amount - $request->discount_amount;
@@ -369,10 +357,6 @@ class MembersController extends Controller
             $member->addMedia($request->file('photo'))->usingFileName('profile_'.$member->id.'.'.$request->photo->getClientOriginalExtension())->toCollection('profile');
         }
 
-        if ($request->hasFile('proof_photo')) {
-            $member->clearMediaCollection('proof');
-            $member->addMedia($request->file('proof_photo'))->usingFileName('proof_'.$member->id.'.'.$request->proof_photo->getClientOriginalExtension())->toCollection('proof');
-        }
 
         $member->updatedBy()->associate(Auth::user());
         $member->save();
@@ -462,6 +446,6 @@ class MembersController extends Controller
             return $request->drp_start.' - '.$request->drp_end;
         }
 
-        return 'Select daterange filter';
+        return 'اختر التاريخ';
     }
 }

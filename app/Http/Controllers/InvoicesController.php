@@ -27,7 +27,7 @@ class InvoicesController extends Controller
         $count = $invoices->total();
 
         if (! $request->has('drp_start') or ! $request->has('drp_end')) {
-            $drp_placeholder = 'Select daterange filter';
+            $drp_placeholder = 'اختر التاريخ';
         } else {
             $drp_placeholder = $request->drp_start.' - '.$request->drp_end;
         }
@@ -44,7 +44,7 @@ class InvoicesController extends Controller
         $count = $invoicesTotal->count();
 
         if (! $request->has('drp_start') or ! $request->has('drp_end')) {
-            $drp_placeholder = 'Select daterange filter';
+            $drp_placeholder = 'اختر التاريخ';
         } else {
             $drp_placeholder = $request->drp_start.' - '.$request->drp_end;
         }
@@ -61,7 +61,7 @@ class InvoicesController extends Controller
         $count = $invoicesTotal->count();
 
         if (! $request->has('drp_start') or ! $request->has('drp_end')) {
-            $drp_placeholder = 'Select daterange filter';
+            $drp_placeholder = 'اختر التاريخ';
         } else {
             $drp_placeholder = $request->drp_start.' - '.$request->drp_end;
         }
@@ -78,7 +78,7 @@ class InvoicesController extends Controller
         $count = $invoicesTotal->count();
 
         if (! $request->has('drp_start') or ! $request->has('drp_end')) {
-            $drp_placeholder = 'Select daterange filter';
+            $drp_placeholder = 'اختر التاريخ';
         } else {
             $drp_placeholder = $request->drp_start.' - '.$request->drp_end;
         }
@@ -95,7 +95,7 @@ class InvoicesController extends Controller
         $count = $invoicesTotal->count();
 
         if (! $request->has('drp_start') or ! $request->has('drp_end')) {
-            $drp_placeholder = 'Select daterange filter';
+            $drp_placeholder = 'اختر التاريخ';
         } else {
             $drp_placeholder = $request->drp_start.' - '.$request->drp_end;
         }

@@ -99,35 +99,7 @@ class Utilities
     }
     }
 
-    // Aim for member & enquiry creation
-    public static function getAim($aim)
-    {
-        switch ($aim) {
-        case '1':
-            return 'Networking';
-            break;
 
-        case '2':
-            return 'Body Building';
-            break;
-
-        case '3':
-            return 'Fatloss';
-            break;
-
-        case '4':
-            return 'Weightgain';
-            break;
-
-        case '5':
-            return 'Others';
-            break;
-
-        default:
-            return 'Fitness';
-            break;
-    }
-    }
 
     // Invoice Labels
     public static function getInvoiceLabel($status)
@@ -205,53 +177,8 @@ class Utilities
     }
     }
 
-    // Occupation of members
-    public static function getOccupation($occupation)
-    {
-        switch ($occupation) {
-        case '1':
-            return 'Housewife';
-            break;
 
-        case '2':
-            return 'Self Employed';
-            break;
 
-        case '3':
-            return 'Professional';
-            break;
-
-        case '4':
-            return 'Freelancer';
-            break;
-
-        case '5':
-            return 'Others';
-            break;
-
-        default:
-            return 'Student';
-            break;
-    }
-    }
-
-    // Source for member & enquiry creation
-    public static function getSource($source)
-    {
-        switch ($source) {
-        case '1':
-            return 'Word of mouth';
-            break;
-
-        case '2':
-            return 'Others';
-            break;
-
-        default:
-            return 'Promotions';
-            break;
-    }
-    }
 
     // Member Status
     public static function getStatusValue($status)

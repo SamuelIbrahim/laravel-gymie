@@ -50,7 +50,6 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['email' => 'unique:mst_users,email']);
 
         $user = ['name'=>$request->name,
                     'email'=> $request->email,
