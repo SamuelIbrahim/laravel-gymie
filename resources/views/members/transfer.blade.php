@@ -29,7 +29,7 @@
                 <div class="col-md-12">
                     <div class="panel no-border">
                         <div class="panel-title">
-                            <div class="panel-head font-size-20">Enter details of the member</div>
+                            <div class="panel-head font-size-20">ادخل بيانات العضو</div>
                         </div>
 
                         <div class="panel-body">
@@ -113,21 +113,21 @@
                 <div class="col-md-12">
                     <div class="panel no-border">
                         <div class="panel-title">
-                            <div class="panel-head font-size-20">Enter details of the subscription</div>
+                            <div class="panel-head font-size-20">بيانات الاشتراك</div>
                         </div>
 
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    {!! Form::label('plan_0','Plan') !!}
+                                    {!! Form::label('plan_0','خطة الاشتراك') !!}
                                 </div>
 
                                 <div class="col-sm-3">
-                                    {!! Form::label('start_date_0','Start Date') !!}
+                                    {!! Form::label('start_date_0','تاريخ بداية الاشتراك') !!}
                                 </div>
 
                                 <div class="col-sm-3">
-                                    {!! Form::label('end_date_0','End Date') !!}
+                                    {!! Form::label('end_date_0','تاريخ نهاية الاشتراك') !!}
                                 </div>
 
                                 <div class="col-sm-1">
@@ -177,7 +177,7 @@
                             <div class="row">
                                 <div class="col-sm-2 pull-right">
                                     <div class="form-group">
-                                        <span class="btn btn-sm btn-primary pull-right" id="addSubscription">Add</span>
+                                        <span class="btn btn-sm btn-primary pull-right" id="addSubscription">اضافة</span>
                                     </div>
                                 </div>
                             </div>
@@ -281,14 +281,14 @@
                 <div class="col-md-12">
                     <div class="panel no-border">
                         <div class="panel-title">
-                            <div class="panel-head font-size-20">Enter details of the payment</div>
+                            <div class="panel-head font-size-20">بيانات الدفع</div>
                         </div>
 
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        {!! Form::label('payment_amount','Amount Received') !!}
+                                        {!! Form::label('payment_amount','المبلغ المستلم') !!}
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-inr"></i></div>
                                             {!! Form::text('payment_amount',null,['class'=>'form-control', 'id' => 'payment_amount', 'data-amounttotal' => '0']) !!}
@@ -298,7 +298,7 @@
 
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        {!! Form::label('payment_amount_pending','Amount Pending') !!}
+                                        {!! Form::label('payment_amount_pending','المبلغ المتبقي') !!}
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-inr"></i></div>
                                             {!! Form::text('payment_amount_pending',null,['class'=>'form-control', 'id' => 'payment_amount_pending', 'readonly']) !!}
@@ -309,22 +309,22 @@
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        {!! Form::label('mode','Mode') !!}
-                                        {!! Form::select('mode',array('1' => 'Cash', '0' => 'Cheque'),1,['class'=>'form-control selectpicker show-tick', 'id' => 'mode']) !!}
+                                        {!! Form::label('mode','طريقة الدفع') !!}
+                                        {!! Form::select('mode',array('1' => 'نقدي', '0' => 'شيك'),1,['class'=>'form-control selectpicker show-tick', 'id' => 'mode']) !!}
                                     </div>
                                 </div>
                             </div> <!-- /Row -->
                             <div class="row" id="chequeDetails">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        {!! Form::label('number','Cheque number') !!}
+                                        {!! Form::label('number','رقم الشيك') !!}
                                         {!! Form::text('number',null,['class'=>'form-control', 'id' => 'number']) !!}
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        {!! Form::label('date','Cheque date') !!}
+                                        {!! Form::label('date','تاريخ الشيك') !!}
                                         {!! Form::text('date',null,['class'=>'form-control datepicker-default', 'id' => 'date']) !!}
                                     </div>
                                 </div>

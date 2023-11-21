@@ -5,21 +5,21 @@ use Carbon\Carbon;
     <div class="col-md-12">
         <div class="panel no-border">
             <div class="panel-title">
-                <div class="panel-head font-size-20">Enter details of the subscription</div>
+                <div class="panel-head font-size-20">بيانات الاشتراك</div>
             </div>
 
             <div class="panel-body">
                 <div class="row">
                     <div class="col-sm-5">
-                        {!! Form::label('plan_0','Plan') !!}
+                        {!! Form::label('plan_0','خطة الاشتراك') !!}
                     </div>
 
                     <div class="col-sm-3">
-                        {!! Form::label('start_date_0','Start Date') !!}
+                        {!! Form::label('start_date_0','تاريخ بداية الاشتراك') !!}
                     </div>
 
                     <div class="col-sm-3">
-                        {!! Form::label('end_date_0','End Date') !!}
+                        {!! Form::label('end_date_0','تاريخ نهاية الاشتراك') !!}
                     </div>
 
                     <div class="col-sm-1">
@@ -69,7 +69,7 @@ use Carbon\Carbon;
                 <div class="row">
                     <div class="col-sm-2 pull-right">
                         <div class="form-group">
-                            <span class="btn btn-sm btn-primary pull-right" id="addSubscription">Add</span>
+                            <span class="btn btn-sm btn-primary pull-right" id="addSubscription">اضافة</span>
                         </div>
                     </div>
                 </div>
