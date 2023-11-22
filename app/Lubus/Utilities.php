@@ -185,15 +185,15 @@ class Utilities
     {
         switch ($status) {
         case '0':
-            return 'Inactive';
+            return 'غير نشط';
             break;
 
         case '2':
-            return 'Archived';
+            return 'مؤرشف';
             break;
 
         default:
-            return 'Active';
+            return 'نشط';
             break;
     }
     }
@@ -255,19 +255,19 @@ class Utilities
     {
         switch ($status) {
         case '1':
-            return 'Paid';
+            return 'مدفوعة';
             break;
 
         case '2':
-            return 'Partial';
+            return 'مدفوعة جزئيا';
             break;
 
         case '3':
-            return 'Overpaid';
+            return 'مدفوعة اكثر من المطلوب';
             break;
 
         default:
-            return 'Unpaid';
+            return 'غير مدفوعة';
             break;
     }
     }
@@ -277,19 +277,19 @@ class Utilities
     {
         switch ($status) {
         case '0':
-            return 'Expired';
+            return 'منتهية';
             break;
 
         case '2':
-            return 'Renewed';
+            return 'تم التجديد';
             break;
 
         case '3':
-            return 'Cancelled';
+            return 'ملغية';
             break;
 
         default:
-            return 'OnGoing';
+            return 'جاري';
             break;
     }
     }
@@ -321,11 +321,11 @@ class Utilities
     {
         switch ($status) {
         case '0':
-            return 'Cheque';
+            return 'شيك';
             break;
 
         default:
-            return 'Cash';
+            return 'نقدي';
             break;
     }
     }
@@ -361,11 +361,11 @@ class Utilities
     {
         switch ($gender) {
         case 'm':
-            return 'Male';
+            return 'ذكر';
             break;
 
         case 'f':
-            return 'Female';
+            return 'انثى';
             break;
     }
     }
@@ -375,11 +375,11 @@ class Utilities
     {
         switch ($display) {
         case 'gym_logo':
-            return 'Gym Logo';
+            return 'شعار الجيم';
             break;
 
         default:
-            return 'Gym Name';
+            return 'اسم الجيم';
             break;
     }
     }
