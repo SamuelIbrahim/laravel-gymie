@@ -47,7 +47,7 @@
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-users"></i><a href="{{ action('MembersController@index') }}">الأعضاء</a></div>
+                            <div class="panel-head"><i class="fa fa-users"></i><a href="{{ action('MembersController@index') }}">العملاء</a></div>
                             <div class="pull-right"><a href="{{ action('MembersController@create') }}" class="btn-sm btn-primary active" role="button"><i
                                             class="fa fa-user-plus"></i> اضافة</a></div>
                         </div>
@@ -92,7 +92,7 @@
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-phone"></i><a href="{{ action('EnquiriesController@index') }}">الأعضاء المحتملين</a></div>
+                            <div class="panel-head"><i class="fa fa-phone"></i><a href="{{ action('EnquiriesController@index') }}">العملاء المحتملين</a></div>
                             <div class="pull-right"><a href="{{ action('EnquiriesController@create') }}" class="btn-sm btn-primary active" role="button"><i
                                             class="fa fa-phone"></i> اضافة</a></div>
                         </div>
@@ -100,7 +100,7 @@
                         <div class="panel-body with-nav-tabs">
                             <!-- Tabs Heads -->
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#enquiries" data-toggle="tab">الأعضاء المحتملين</a></li>
+                                <li class="active"><a href="#enquiries" data-toggle="tab">العملاء المحتملين</a></li>
                                 <li><a href="#reminders" data-toggle="tab">التذكيرات<span class="label label-warning margin-left-5">{{ $reminderCount }}</span></a>
                                 </li>
                             </ul>

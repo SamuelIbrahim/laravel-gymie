@@ -18,7 +18,7 @@
                                 <div class="col-sm-3">
                                     <div class="form-group">
                                         <?php $member_code = App\Member::where('status', '=', '1')->lists('member_code', 'id'); ?>
-                                        {!! Form::label('member_id','كود العضو') !!}
+                                        {!! Form::label('member_id','كود العميل') !!}
 
                                         {!! Form::text('member_display', $subscription->member->member_code,['class'=> 'form-control', 'id' => 'member_display','readonly' => 'readonly']) !!}
                                         {!! Form::hidden('member_id', $subscription->member_id) !!}

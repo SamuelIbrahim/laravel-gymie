@@ -101,7 +101,7 @@
                                 <table id="subscriptions" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>كود العضو</th>
+                                        <th>كود العميل</th>
                                         <th>الاسم</th>
                                         <th>خطة الاشتراك</th>
                                         <th>تاريخ بداية الاشتراك</th>

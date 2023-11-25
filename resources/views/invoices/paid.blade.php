@@ -47,7 +47,7 @@
 
                                         <div class="col-sm-2">
                                             {!! Form::label('sort_field','الترتيب حسب') !!}
-                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','invoice_number' => 'رقم الفاتورة','member_name' => 'كود العضو','total' => 'اجمالي المبلغ','pending_amount' => 'المبلغ  المتبقي'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
+                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','invoice_number' => 'رقم الفاتورة','member_name' => 'كود العميل','total' => 'اجمالي المبلغ','pending_amount' => 'المبلغ  المتبقي'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
                                         </div>
 
                                         <div class="col-sm-2">
@@ -80,7 +80,7 @@
                                     <thead>
                                     <tr>
                                         <th>رقم الفاتورة</th>
-                                        <th>اسم العضو</th>
+                                        <th>اسم العميل</th>
                                         <th>اجمالي المبلغ</th>
                                         <th>المتبقي</th>
                                         <th>الخصم</th>

@@ -9,7 +9,7 @@
             <h1 class="page-title no-line-height">المدفوعات
                 @permission(['manage-gymie','manage-payments','add-payment'])
                 <a href="{{ action('PaymentsController@create') }}" class="page-head-btn btn-sm btn-primary active" role="button">اضافة جديد</a>
-                <small>بيانات كل مدفوعات الاعضاء</small>
+                <small>بيانات كل مدفوعات العملاء</small>
             </h1>
             @permission(['manage-gymie','pagehead-stats'])
             <h1 class="font-size-30 text-right color-blue-grey-600 animated fadeInDown total-count pull-right"><span data-toggle="counter" data-start="0"
@@ -52,7 +52,7 @@
 
                                         <div class="col-sm-2">
                                             {!! Form::label('sort_field','الترتيب حسب') !!}
-                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','payment_amount' => 'المبلغ','mode' => 'طريقة الدفع','member_name' => 'اسم العضو','member_code' => 'كود العضو','invoice_number' => 'رقم الفاتورة'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
+                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','payment_amount' => 'المبلغ','mode' => 'طريقة الدفع','member_name' => 'اسم العميل','member_code' => 'كود العميل','invoice_number' => 'رقم الفاتورة'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
                                         </div>
 
                                         <div class="col-sm-2">
@@ -86,7 +86,7 @@
                                     <thead>
                                     <tr>
                                         <th>رقم الفاتورة</th>
-                                        <th>اسم العضو</th>
+                                        <th>اسم العميل</th>
                                         <th>المبلغ</th>
                                         <th>طريقة الدفع</th>
                                         <th>تاريخ الدفع</th>

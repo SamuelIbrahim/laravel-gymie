@@ -18,7 +18,7 @@
                             <div class="row">
                                 <div class="col-sm-3">
 
-                                    {!! Form::label('member_id','كود العضو') !!}
+                                    {!! Form::label('member_id','كود العميل') !!}
 
                                 </div>
 

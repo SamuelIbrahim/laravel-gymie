@@ -93,15 +93,15 @@
                 @permission(['manage-gymie','manage-members','view-member'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('members*',true) }}">
                     <a href="#">
-                        <i class="ion-person-add"></i> <span>الاعضاء</span>
+                        <i class="ion-person-add"></i> <span>العملاء</span>
                     </a>
                     <ul>
-                        <li class="{{ Utilities::setActiveMenu('members/all') }}"><a href="{{ action('MembersController@index') }}">كل الأعضاء</a></li>
+                        <li class="{{ Utilities::setActiveMenu('members/all') }}"><a href="{{ action('MembersController@index') }}">كل العملاء</a></li>
                         @permission(['manage-gymie','manage-members','add-member'])
                         <li class="{{ Utilities::setActiveMenu('members/create') }}"><a href="{{ action('MembersController@create') }}">اضافة عضو جديد</a></li>
                         @endpermission
-                        <li class="{{ Utilities::setActiveMenu('members/active') }}"><a href="{{ action('MembersController@active') }}">الأعضاء النشطين</a></li>
-                        <li class="{{ Utilities::setActiveMenu('members/inactive') }}"><a href="{{ action('MembersController@inactive') }}">الأعضاء المعطلين</a>
+                        <li class="{{ Utilities::setActiveMenu('members/active') }}"><a href="{{ action('MembersController@active') }}">العملاء النشطين</a></li>
+                        <li class="{{ Utilities::setActiveMenu('members/inactive') }}"><a href="{{ action('MembersController@inactive') }}">العملاء المعطلين</a>
                         </li>
                     </ul>
                 </li>

@@ -84,8 +84,8 @@
                                 <table id="expiring" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>كود العضو</th>
-                                        <th>اسم العضو</th>
+                                        <th>كود العميل</th>
+                                        <th>اسم العميل</th>
                                         <th>خطة الاشتراك</th>
                                         <th>تاريخ بداية الاشتراك</th>
                                         <th>تاريخ نهاية الاشتراك</th>

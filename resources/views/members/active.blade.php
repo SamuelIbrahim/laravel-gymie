@@ -7,7 +7,7 @@
         <!-- BEGIN PAGE HEADING -->
         <div class="page-head bg-grey-100 padding-top-15 no-padding-bottom">
             @include('flash::message')
-            <h1 class="page-title no-line-height">الاعضاء النشطين
+            <h1 class="page-title no-line-height">العملاء النشطين
                 <small>بيانات كل اعضاء الجيم النشطين</small>
             </h1>
             @permission(['manage-gymie','pagehead-stats'])
@@ -15,7 +15,7 @@
                                                                                                                      data-from="0" data-to="{{ $count }}"
                                                                                                                      data-speed="600"
                                                                                                                      data-refresh-interval="10"></span>
-                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">الأعضاء النشطين</small>
+                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">العملاء النشطين</small>
             </h1>
             @endpermission
         </div><!-- / PageHead -->
@@ -48,7 +48,7 @@
 
                                         <div class="col-sm-2">
                                             {!! Form::label('sort_field','الترتيب حسب') !!}
-                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','name' => 'الاسم', 'member_code' => 'كود العضو', 'plan_name' => 'خطة الاشتراك', 'status' => 'الحالة'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
+                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','name' => 'الاسم', 'member_code' => 'كود العميل', 'plan_name' => 'خطة الاشتراك', 'status' => 'الحالة'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
                                         </div>
 
                                         <div class="col-sm-2">
@@ -83,7 +83,7 @@
                                     <thead>
                                     <tr>
                                         <th>صورة</th>
-                                        <th>كود العضو</th>
+                                        <th>كود العميل</th>
                                         <th>الاسم</th>
                                         <th>رقم الهاتف</th>
                                         <th>خطة الاشتراك</th>
@@ -135,7 +135,7 @@
                                                         <li>
                                                             @permission(['manage-gymie','manage-members','delete-member'])
                                                             <a href="#" class="delete-record" data-delete-url="{{ url('members/'.$member->id.'/archive') }}"
-                                                               data-record-id="{{$member->id}}">حذف العضو</a>
+                                                               data-record-id="{{$member->id}}">حذف العميل</a>
                                                             @endpermission
                                                         </li>
                                                     </ul>

@@ -7,7 +7,7 @@
         <!-- BEGIN PAGE HEADING -->
         <div class="page-head bg-grey-100 padding-top-15 no-padding-bottom">
             @include('flash::message')
-            <h1 class="page-title no-line-height">الأعضاء
+            <h1 class="page-title no-line-height">العملاء
                 @permission(['manage-gymie','manage-members','add-member'])
                 <a href="{{ action('MembersController@create') }}" class="page-head-btn btn-sm btn-primary active" role="button">اضافة جديد</a>
                 <small>بيانات كل اعضاء الجيم</small>
@@ -17,7 +17,7 @@
                                                                                                                      data-from="0" data-to="{{ $count }}"
                                                                                                                      data-speed="600"
                                                                                                                      data-refresh-interval="10"></span>
-                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">اجمالي الأعضاء</small>
+                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">اجمالي العملاء</small>
             </h1>
             @endpermission
             @endpermission
@@ -51,7 +51,7 @@
 
                                         <div class="col-sm-2">
                                             {!! Form::label('sort_field','الترتيب حسب') !!}
-                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','name' => 'الاسم', 'member_code' => 'كود العضو', 'status' => 'الحالة'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
+                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','name' => 'الاسم', 'member_code' => 'كود العميل', 'status' => 'الحالة'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
                                         </div>
 
                                         <div class="col-sm-2">
@@ -138,7 +138,7 @@
                                                         <li>
                                                             @permission(['manage-gymie','manage-members','delete-member'])
                                                             <a href="#" class="delete-record" data-delete-url="{{ url('members/'.$member->id.'/archive') }}"
-                                                               data-record-id="{{$member->id}}">حذف العضو</a>
+                                                               data-record-id="{{$member->id}}">حذف العميل</a>
                                                             @endpermission
                                                         </li>
                                                     </ul>

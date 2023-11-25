@@ -29,7 +29,7 @@
                 <div class="col-md-12">
                     <div class="panel no-border">
                         <div class="panel-title">
-                            <div class="panel-head font-size-20">ادخل بيانات العضو</div>
+                            <div class="panel-head font-size-20">ادخل بيانات العميل</div>
                         </div>
 
                         <div class="panel-body">
