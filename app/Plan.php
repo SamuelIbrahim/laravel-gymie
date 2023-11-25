@@ -34,7 +34,7 @@ class Plan extends Model
 
     public function getPlanDisplayAttribute()
     {
-        return $this->plan_code.' @ '.$this->amount.' For '.$this->days.' Days';
+        return $this->plan_name;
     }
 
     public function scopeExcludeArchive($query)
