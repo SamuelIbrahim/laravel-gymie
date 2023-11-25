@@ -44,11 +44,11 @@ class Utilities
     {
         switch ($status) {
         case '1':
-            return 'Done';
+            return 'تم';
             break;
 
         default:
-            return 'Pending';
+            return 'باقي';
             break;
     }
     }
@@ -128,23 +128,23 @@ class Utilities
     {
         switch ($repeat) {
         case '0':
-            return 'Never Repeat';
+            return 'ابدا';
             break;
 
         case '1':
-            return 'Every Day';
+            return 'كل يوم';
             break;
 
         case '2':
-            return 'Every Week';
+            return 'كل اسبوع';
             break;
 
         case '3':
-            return 'Every Month';
+            return 'كل شهر';
             break;
 
         default:
-            return 'Every Year';
+            return 'كل سنة';
             break;
     }
     }
@@ -389,11 +389,11 @@ class Utilities
     {
         switch ($mode) {
         case '0':
-            return 'Manual';
+            return 'يدوي';
             break;
 
         default:
-            return 'Automatic';
+            return 'تلقائي';
             break;
     }
     }

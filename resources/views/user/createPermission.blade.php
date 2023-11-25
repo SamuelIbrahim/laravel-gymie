@@ -50,7 +50,7 @@
 
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        {!! Form::label('group_key','Group key') !!}
+                                        {!! Form::label('group_key','المجموعة') !!}
                                         {!! Form::text('group_key',null,['class'=>'form-control', 'id' => 'group_key']) !!}
                                     </div>
                                 </div>

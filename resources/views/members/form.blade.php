@@ -34,7 +34,7 @@
     <div class="col-sm-6">
         <div class="form-group">
             {!! Form::label('gender','النوع') !!}
-            {!! Form::select('gender',array('m' => 'Male', 'f' => 'Female'),null,['class'=>'form-control selectpicker show-tick show-menu-arrow', 'id' => 'gender']) !!}
+            {!! Form::select('gender',array('m' => 'ذكر', 'f' => 'انثى'),null,['class'=>'form-control selectpicker show-tick show-menu-arrow', 'id' => 'gender']) !!}
         </div>
     </div>
 </div>

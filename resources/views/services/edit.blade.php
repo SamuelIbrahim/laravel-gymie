@@ -8,7 +8,7 @@
                 <div class="col-md-12">
                     <div class="panel no-border">
                         <div class="panel-title">
-                            <div class="panel-head font-size-20">Enter details of the service</div>
+                            <div class="panel-head font-size-20">بيانات الخدمة</div>
                         </div>
 
                         {!! Form::model($service, ['method' => 'POST','action' => ['ServicesController@update',$service->id],'id'=>'servicesform']) !!}

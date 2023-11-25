@@ -6,7 +6,7 @@
         <!-- BEGIN PAGE HEADING -->
         <div class="page-head bg-grey-100">
             @include('flash::message')
-            <h1 class="page-title">Permissions</h1>
+            <h1 class="page-title">الصلاحيات</h1>
             <a href="{{ action('AclController@createPermission') }}" class="btn btn-primary active pull-right" role="button"> Add</a></h1>
         </div>
 
@@ -21,10 +21,10 @@
                             <table id="staffs" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    <th class="text-center">Name</th>
-                                    <th class="text-center">Display name</th>
-                                    <th class="text-center">Description</th>
-                                    <th class="text-center">Actions</th>
+                                    <th class="text-center">الاسم</th>
+                                    <th class="text-center">الاسم المعروض</th>
+                                    <th class="text-center">الوصف</th>
+                                    <th class="text-center">عمليات</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -52,15 +52,15 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                        <h4 class="modal-title">Confirm</h4>
+                                                        <h4 class="modal-title">تأكيد</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p>Are you sure you want to delete it?</p>
+                                                        <p>هل انت متأكد من الحذف?</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         {!! Form::Open(['action'=>['AclController@deletePermission',$permission->id],'method' => 'POST','id'=>'deleteform-'.$permission->id]) !!}
                                                         <input type="submit" class="btn btn-danger" value="Yes" id="btn-{{ $permission->id }}"/>
-                                                        <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-info" data-dismiss="modal">الغاء</button>
                                                         {!! Form::Close() !!}
                                                     </div>
                                                 </div>

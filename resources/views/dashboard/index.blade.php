@@ -156,107 +156,10 @@
                 </div>
                 @endpermission
 
-                <div class="col-lg-6">
-                    <div class="panel">
-                        <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>الشيكات</div>
-                        </div>
-
-                        <div class="panel-body with-nav-tabs">
-                            <!-- Tabs Heads -->
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#recieved" data-toggle="tab">المستلمة<span
-                                                class="label label-warning margin-left-5">{{ $recievedChequesCount }}</span></a></li>
-                                <li><a href="#deposited" data-toggle="tab">المودعة<span
-                                                class="label label-primary margin-left-5">{{ $depositedChequesCount }}</span></a></li>
-                                <li><a href="#bounced" data-toggle="tab">المرفوضة<span class="label label-danger margin-left-5">{{ $bouncedChequesCount }}</span></a>
-                                </li>
-                            </ul>
-
-                            <!-- Tab Content -->
-                            <div class="tab-content">
-                                <div class="tab-pane fade in active" id="recieved">
-                                    @include('dashboard._index.receivedCheque', ['recievedCheques' =>  $recievedCheques])
-                                </div>
-
-                                <div class="tab-pane fade" id="deposited">
-                                    @include('dashboard._index.depositedCheques', ['depositedCheques' =>  $depositedCheques])
-                                </div>
-
-                                <div class="tab-pane fade" id="bounced">
-                                    @include('dashboard._index.bouncedCheques', ['bouncedCheques' =>  $bouncedCheques])
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
             @permission(['manage-gymie','view-dashboard-charts'])
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel">
-                        <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-comments-o"></i>سجل الرسائل النصية</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-5">
-                                    <div class="panel bg-light-blue-400">
-                                        <div class="panel-body padding-15-20">
-                                            <div class="clearfix">
-                                                <div class="pull-left">
-                                                    <div class="color-white font-size-24 font-roboto font-weight-600" data-toggle="counter" data-start="0"
-                                                         data-from="0" data-to="{{ \Utilities::getSetting('sms_balance') }}" data-speed="500"
-                                                         data-refresh-interval="10"></div>
-                                                </div>
-
-                                                <div class="pull-right">
-                                                    <i class="font-size-24 color-light-blue-100 fa fa-comments"></i>
-                                                </div>
-
-                                                <div class="clearfix"></div>
-
-                                                <div class="pull-left">
-                                                    <div class="display-block color-light-blue-50 font-weight-600">رصيد الرسائل النصية</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @if($smsRequestSetting == 0)
-                                    <div class="col-lg-7">
-                                        <button class="btn btn-labeled btn-success pull-right margin-top-20" data-toggle="modal" data-target="#smsRequestModal"
-                                                data-id="smsRequestModal"><span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>طلب المزيد من الرسائل النصية
-                                        </button>
-                                    </div>
-                                @endif
-                            </div>
-                            @include('dashboard._index.smsLog', ['smslogs' => $smslogs])
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="panel bg-white">
-                        <div class="panel-title">
-                            <div class="panel-head">المشتركين حسب خطة الاشتراك</div>
-                        </div>
-                        <div class="panel-body padding-top-10">
-                            @if(!empty($membersPerPlan))
-                                <div id="gymie-members-per-plan" class="chart"></div>
-                            @else
-                                <div class="tab-empty-panel font-size-24 color-grey-300">
-                                    <div id="gymie-members-per-plan" class="chart"></div>
-                                    No Data
-                                </div>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="row">
                 <div class="col-lg-12">

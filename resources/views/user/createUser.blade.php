@@ -9,7 +9,7 @@
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                            <strong>عذرا!</strong> حدث خطأ ما.<br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
@@ -22,7 +22,7 @@
 
                     <div class="panel no-border">
                         <div class="panel-title">
-                            <div class="panel-head">Enter Details of the user</div>
+                            <div class="panel-head">بيانات المستخدم</div>
                         </div>
 
 
@@ -30,14 +30,14 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        {!! Form::label('name','Name') !!}
+                                        {!! Form::label('name','الاسم') !!}
                                         {!! Form::text('name',null,['class'=>'form-control', 'id' => 'name']) !!}
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        {!! Form::label('email','Email') !!}
+                                        {!! Form::label('email','البريد الالكتروني') !!}
                                         {!! Form::text('email',null,['class'=>'form-control', 'id' => 'email']) !!}
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                    {!! Form::label('status','Status') !!}
+                                    {!! Form::label('status','الحالة') !!}
                                     <!--0 for inactive , 1 for active-->
                                         {!! Form::select('status',array('1' => 'Active', '0' => 'InActive'),null,['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'status']) !!}
                                     </div>
@@ -55,7 +55,7 @@
                                 @if(isset($user) && $user->photo != "")
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            {!! Form::label('photo','Photo') !!}
+                                            {!! Form::label('photo','صورة') !!}
                                             {!! Form::file('photo',['class'=>'form-control', 'id' => 'photo']) !!}
                                         </div>
                                     </div>
@@ -66,7 +66,7 @@
                                 @else
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            {!! Form::label('photo','Photo') !!}
+                                            {!! Form::label('photo','صورة') !!}
                                             {!! Form::file('photo',['class'=>'form-control', 'id' => 'photo']) !!}
                                         </div>
                                     </div>
@@ -76,14 +76,14 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        {!! Form::label('password','Password') !!}
+                                        {!! Form::label('password','كلمة المرور') !!}
                                         {!! Form::password('password',['class'=>'form-control', 'id' => 'password']) !!}
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        {!! Form::label('password_confirmation','Confirm Password') !!}
+                                        {!! Form::label('password_confirmation','تأكيد كلمة المرور') !!}
                                         {!! Form::password('password_confirmation',['class'=>'form-control', 'id' => 'password_confirmation']) !!}
                                     </div>
                                 </div>
@@ -93,14 +93,14 @@
 
                     <div class="panel no-border">
                         <div class="panel-title">
-                            <div class="panel-head">Enter Role of the user</div>
+                            <div class="panel-head">ادخل دور المستخدم</div>
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <?php $roles = App\Role::where('id', '!=', '1')->lists('name', 'id'); ?>
-                                        {!! Form::label('Role') !!}
+                                        {!! Form::label('الدور') !!}
                                         {!! Form::select('role_id',$roles,null,['class'=>'form-control selectpicker show-tick show-menu-arrow', 'id' => 'role_id']) !!}
                                     </div>
                                 </div>

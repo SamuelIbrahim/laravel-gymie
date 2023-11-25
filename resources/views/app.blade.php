@@ -88,17 +88,6 @@
                 </li>
 
                 @permission(['manage-gymie','manage-enquiries','view-enquiry'])
-                <li class="nav-dropdown {{ Utilities::setActiveMenu('enquiries*',true) }}">
-                    <a href="#">
-                        <i class="ion-ios-telephone"></i> <span>الاعضاء المحتملين</span>
-                    </a>
-                    <ul>
-                        <li class="{{ Utilities::setActiveMenu('enquiries/all') }}"><a href="{{ action('EnquiriesController@index') }}">كل الاعضاء المحتملين</a></li>
-                        @permission(['manage-gymie','manage-enquiries','add-enquiry'])
-                        <li class="{{ Utilities::setActiveMenu('enquiries/create') }}"><a href="{{ action('EnquiriesController@create') }}">اضافة عضو محتمل</a></li>
-                        @endpermission
-                    </ul>
-                </li>
                 @endpermission
 
                 @permission(['manage-gymie','manage-members','view-member'])
@@ -166,17 +155,6 @@
                         </li> -->
 
                 @permission(['manage-gymie','manage-sms'])
-                <li class="nav-dropdown {{ Utilities::setActiveMenu('sms*',true) }}">
-                    <a href="#">
-                        <i class="ion-ios-paper"></i> <span>الرسائل النصية</span>
-                    </a>
-                    <ul>
-                        <li class="{{ Utilities::setActiveMenu('sms/triggers') }}"><a href="{{ action('SmsController@triggersIndex') }}">المسببات</a></li>
-                        <li class="{{ Utilities::setActiveMenu('sms/events') }}"><a href="{{ action('SmsController@eventsIndex') }}">جدولة رسالة</a></li>
-                        <li class="{{ Utilities::setActiveMenu('sms/send') }}"><a href="{{ action('SmsController@send') }}">ارسال رسالة</a></li>
-                        <li class="{{ Utilities::setActiveMenu('sms/log') }}"><a href="{{ action('SmsController@logIndex') }}">سجل الرسائل</a></li>
-                    </ul>
-                </li>
                 @endpermission
 
                 @permission(['manage-gymie','manage-invoices','view-invoice'])

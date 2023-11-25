@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-6">
         <div class="form-group">
-            {!! Form::label('name','Category Name') !!}
+            {!! Form::label('name','اسم القسم') !!}
             {!! Form::text('name',null,['class'=>'form-control', 'id' => 'name']) !!}
         </div>
     </div>
@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-sm-6">
         <div class="form-group">
-        {!! Form::label('status','Status') !!}
+        {!! Form::label('status','الحالة') !!}
         <!--0 for inactive , 1 for active-->
             {!! Form::select('status',array('1' => 'Active', '0' => 'InActive'),null,['class' => 'form-control', 'id' => 'status']) !!}
         </div>

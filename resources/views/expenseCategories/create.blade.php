@@ -8,7 +8,7 @@
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                    <strong>عذرا!</strong> حدث خطأ ما.<br><br>
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -20,12 +20,12 @@
                 <div class="col-md-12">
                     <div class="panel no-border">
                         <div class="panel-title">
-                            <div class="panel-head font-size-20">Enter details of the expense category</div>
+                            <div class="panel-head font-size-20">بيانات قسم المصروفات</div>
                         </div>
                         <div class="panel-body">
                             {!! Form::Open(['url' => 'expenses/categories', 'id' => 'expensecategoriesform']) !!}
 
-                            @include('expenseCategories.form',['submitButtonText' => 'Add'])
+                            @include('expenseCategories.form',['submitButtonText' => 'اضافة'])
 
                             {!! Form::Close() !!}
                         </div>

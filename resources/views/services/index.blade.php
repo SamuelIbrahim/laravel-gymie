@@ -6,9 +6,9 @@
         <!-- BEGIN PAGE HEADING -->
         <div class="page-head bg-grey-100 padding-top-15 no-padding-bottom">
             @include('flash::message')
-            <h1 class="page-title no-line-height">Services
+            <h1 class="page-title no-line-height">الخدمات
                 @permission(['manage-gymie','manage-services','add-service'])
-                <a href="{{ action('ServicesController@create') }}" class="page-head-btn btn-sm btn-primary active" role="button">Add New</a>
+                <a href="{{ action('ServicesController@create') }}" class="page-head-btn btn-sm btn-primary active" role="button">اضافة جديد</a>
                 <small>Details of all gym services</small>
             </h1>
             @permission(['manage-gymie','pagehead-stats'])
@@ -16,7 +16,7 @@
                                                                                                                      data-from="0" data-to="{{ $count }}"
                                                                                                                      data-speed="600"
                                                                                                                      data-refresh-interval="10"></span>
-                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">Total Services</small>
+                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">اجمالي الخدمات</small>
             </h1>
             @endpermission
             @endpermission
@@ -43,15 +43,15 @@
                             </div>
 
                             @if($services->count() == 0)
-                                <h4 class="text-center padding-top-15">Sorry! No records found</h4>
+                                <h4 class="text-center padding-top-15">عذرا. لم نعثر على بيانات</h4>
                             @else
 
                                 <table id="services" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th class="text-center">Service Name</th>
-                                        <th class="text-center">Service Description</th>
-                                        <th class="text-center">Actions</th>
+                                        <th class="text-center">اسم الخدمة</th>
+                                        <th class="text-center">وصف الخدمة</th>
+                                        <th class="text-center">عمليات</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -61,7 +61,7 @@
                                             <td class="text-center">{{ $service->description}}</td>
                                             <td class="text-center">
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-info">Actions</button>
+                                                    <button type="button" class="btn btn-info">عمليات</button>
                                                     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <span class="caret"></span>
                                                         <span class="sr-only">Toggle Dropdown</span>
@@ -70,7 +70,7 @@
                                                         @permission(['manage-gymie','manage-services','edit-service'])
                                                         <li>
                                                             <a href="{{ action('ServicesController@edit',['id' => $service->id]) }}">
-                                                                Edit details
+                                                                تعديل البيانات
                                                             </a>
                                                         </li>
                                                         @endpermission
@@ -85,7 +85,7 @@
                                                                data-dependency-message="You have plans assigned to this service, either delete them or assign them to new service"
                                                                data-delete-url="{{ url('plans/services/'.$service->id.'/delete') }}"
                                                                data-record-id="{{$service->id}}">
-                                                                Delete Service
+                                                                حذف الخدمة
                                                             </a>
                                                         </li>
                                                         @endpermission
