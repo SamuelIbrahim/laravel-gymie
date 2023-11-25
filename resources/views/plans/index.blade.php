@@ -6,10 +6,10 @@
         <!-- BEGIN PAGE HEADING -->
         <div class="page-head bg-grey-100 padding-top-15 no-padding-bottom">
             @include('flash::message')
-            <h1 class="page-title no-line-height">Plans
+            <h1 class="page-title no-line-height">خطط الاشتراك
                 @permission(['manage-gymie','manage-plans','add-plan'])
-                <a href="{{ action('PlansController@create') }}" class="page-head-btn btn-sm btn-primary active" role="button">Add New</a>
-                <small>Details of all gym plans</small>
+                <a href="{{ action('PlansController@create') }}" class="page-head-btn btn-sm btn-primary active" role="button">اضافة جديد</a>
+                <small>بيانات كل خطط الاشتراك</small>
             </h1>
             @permission(['manage-gymie','pagehead-stats'])
             <h1 class="font-size-30 text-right color-blue-grey-600 animated fadeInDown total-count pull-right">
@@ -17,7 +17,7 @@
                       data-from="0" data-to="{{ $count }}"
                       data-speed="600"
                       data-refresh-interval="10"></span>
-                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">Total Plans</small>
+                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">خطط الاشتراك</small>
             </h1>
             @endpermission
             @endpermission
@@ -43,20 +43,20 @@
                             </div>
 
                             @if($plans->count() == 0)
-                                <h4 class="text-center padding-top-15">Sorry! No records found</h4>
+                                <h4 class="text-center padding-top-15">عذرا. لم نحصل على بيانات</h4>
                             @else
 
                                 <table id="plans" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Plan Code</th>
-                                        <th>Plan Name</th>
-                                        <th>Service Name</th>
-                                        <th>Plan Details</th>
-                                        <th>Days</th>
-                                        <th>Amount</th>
-                                        <th>Status</th>
-                                        <th class="text-center">Actions</th>
+                                        <th>كود الخطة</th>
+                                        <th>اسم خطة الاشتراك</th>
+                                        <th>اسم الخدمة</th>
+                                        <th>تفاصيل خطط الاشتراك</th>
+                                        <th>عدد الايام</th>
+                                        <th>المبلغ</th>
+                                        <th>الحالة</th>
+                                        <th class="text-center">عمليات</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -74,7 +74,7 @@
 
                                             <td class="text-center">
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-info">Actions</button>
+                                                    <button type="button" class="btn btn-info">عمليات</button>
                                                     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <span class="caret"></span>
                                                         <span class="sr-only">Toggle Dropdown</span>
@@ -83,7 +83,7 @@
                                                         <li>
                                                             @permission(['manage-gymie','manage-plans','edit-plan'])
                                                             <a href="{{ action('PlansController@edit',['id' => $plan->id]) }}">
-                                                                Edit details
+                                                                تعديل البيانات
                                                             </a>
                                                             @endpermission
                                                         </li>
@@ -98,7 +98,7 @@
                                                                data-dependency-message="You have members assigned to this plan, either delete them or assign them to new plan"
                                                                data-delete-url="{{ url('plans/'.$plan->id.'/archive') }}"
                                                                data-record-id="{{$plan->id}}">
-                                                                Delete plan
+                                                                حذف خطة الاشتراك
                                                             </a>
                                                             @endpermission
                                                         </li>

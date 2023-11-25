@@ -22,7 +22,6 @@ class Member extends Model implements HasMediaConversions
         'status',
         'gender',
         'contact',
-        'emergency_contact',
         'health_issues',
         'created_by',
         'updated_by',

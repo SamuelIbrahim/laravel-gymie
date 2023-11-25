@@ -6,15 +6,15 @@
         <!-- BEGIN PAGE HEADING -->
         <div class="page-head bg-grey-100 padding-top-15 no-padding-bottom">
             @include('flash::message')
-            <h1 class="page-title no-line-height">Invoices
-                <small>Details of all paid invoices</small>
+            <h1 class="page-title no-line-height">الفواتير المدفوعة
+                <small>بيانات كل الفواتير المدفوعة</small>
             </h1>
             @permission(['manage-gymie','pagehead-stats'])
             <h1 class="font-size-30 text-right color-blue-grey-600 animated fadeInDown total-count pull-right"><span data-toggle="counter" data-start="0"
                                                                                                                      data-from="0" data-to="{{ $count }}"
                                                                                                                      data-speed="600"
                                                                                                                      data-refresh-interval="10"></span>
-                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">Paid Invoices</small>
+                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">الفواتير المدفوعة</small>
             </h1>
             @endpermission
         </div><!-- / PageHead -->
@@ -32,7 +32,7 @@
 
                                         <div class="col-sm-3">
 
-                                            {!! Form::label('invoice-daterangepicker','Date range') !!}
+                                            {!! Form::label('invoice-daterangepicker','التاريخ') !!}
 
                                             <div id="invoice-daterangepicker"
                                                  class="gymie-daterangepicker btn bg-grey-50 daterange-padding no-border color-grey-600 hidden-xs no-shadow">
@@ -46,24 +46,24 @@
                                         </div>
 
                                         <div class="col-sm-2">
-                                            {!! Form::label('sort_field','Sort By') !!}
-                                            {!! Form::select('sort_field',array('created_at' => 'Date','invoice_number' => 'Invoice number','member_name' => 'Member name','total' => 'Total amount','pending_amount' => 'Pending amount'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
+                                            {!! Form::label('sort_field','الترتيب حسب') !!}
+                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','invoice_number' => 'رقم الفاتورة','member_name' => 'كود العضو','total' => 'اجمالي المبلغ','pending_amount' => 'المبلغ  المتبقي'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
                                         </div>
 
                                         <div class="col-sm-2">
-                                            {!! Form::label('sort_direction','Order') !!}
-                                            {!! Form::select('sort_direction',array('desc' => 'Descending','asc' => 'Ascending'),old('sort_direction'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_direction']) !!}</span>
+                                            {!! Form::label('sort_direction','الترتيب') !!}
+                                            {!! Form::select('sort_direction',array('desc' => 'تنازلي','asc' => 'تصاعدي'),old('sort_direction'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_direction']) !!}</span>
                                         </div>
 
                                         <div class="col-xs-3">
-                                            {!! Form::label('search','Keyword') !!}
+                                            {!! Form::label('search','كلمة البحث') !!}
                                             <input value="{{ old('search') }}" name="search" id="search" type="text" class="form-control padding-right-35"
                                                    placeholder="Search...">
                                         </div>
 
                                         <div class="col-xs-2">
                                             {!! Form::label('&nbsp;') !!} <br/>
-                                            <button type="submit" class="btn btn-primary active no-border">GO</button>
+                                            <button type="submit" class="btn btn-primary active no-border">بحث</button>
                                         </div>
 
                                         {!! Form::Close() !!}
@@ -79,13 +79,13 @@
                                 <table id="invoices" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Invoice Number</th>
-                                        <th>Member Name</th>
-                                        <th>Total Amount</th>
-                                        <th>Pending</th>
-                                        <th>Discount</th>
-                                        <th>Created On</th>
-                                        <th class="text-center">Actions</th>
+                                        <th>رقم الفاتورة</th>
+                                        <th>اسم العضو</th>
+                                        <th>اجمالي المبلغ</th>
+                                        <th>المتبقي</th>
+                                        <th>الخصم</th>
+                                        <th>تاريخ الانشاء</th>
+                                        <th class="text-center">عمليات</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -100,7 +100,7 @@
                                             <td>{{ $invoice->created_at->toDayDateTimeString()}}</td>
                                             <td class="text-center">
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-info">Actions</button>
+                                                    <button type="button" class="btn btn-info">عمليات</button>
                                                     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <span class="caret"></span>
                                                         <span class="sr-only">Toggle Dropdown</span>
@@ -109,7 +109,7 @@
                                                         <li>
                                                             @permission(['manage-gymie','manage-invoices','view-invoice'])
                                                             <a href="{{ action('InvoicesController@show',['id' => $invoice->id]) }}">
-                                                                View invoice
+                                                                عرض الفاتورة
                                                             </a>
                                                             @endpermission
                                                         </li>
@@ -117,7 +117,7 @@
                                                             @permission(['manage-gymie','manage-invoices','delete-invoice'])
                                                             <a href="#" class="delete-record" data-delete-url="{{ url('invoices/'.$invoice->id.'/delete') }}"
                                                                data-record-id="{{$invoice->id}}">
-                                                                Delete invoice
+                                                                حذف الفاتورة
                                                             </a>
                                                             @endpermission
                                                         </li>

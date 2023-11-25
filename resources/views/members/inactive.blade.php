@@ -7,15 +7,15 @@
         <!-- BEGIN PAGE HEADING -->
         <div class="page-head bg-grey-100 padding-top-15 no-padding-bottom">
             @include('flash::message')
-            <h1 class="page-title no-line-height">Inactive Members
-                <small>Details of all inactive gym members</small>
+            <h1 class="page-title no-line-height">الاعضاء المعطلين
+                <small>بيانات كل الاعضاء المعطلين</small>
             </h1>
             @permission(['manage-gymie','pagehead-stats'])
             <h1 class="font-size-30 text-right color-blue-grey-600 animated fadeInDown total-count pull-right"><span data-toggle="counter" data-start="0"
                                                                                                                      data-from="0" data-to="{{ $count }}"
                                                                                                                      data-speed="600"
                                                                                                                      data-refresh-interval="10"></span>
-                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">Inactive Members</small>
+                <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">الاعضاء المعطلين</small>
             </h1>
             @endpermission
         </div><!-- / PageHead -->
@@ -33,7 +33,7 @@
 
                                         <div class="col-sm-3">
 
-                                            {!! Form::label('member-daterangepicker','Date range') !!}
+                                            {!! Form::label('member-daterangepicker','التاريخ') !!}
 
                                             <div id="member-daterangepicker"
                                                  class="gymie-daterangepicker btn bg-grey-50 daterange-padding no-border color-grey-600 hidden-xs no-shadow">
@@ -47,24 +47,24 @@
                                         </div>
 
                                         <div class="col-sm-2">
-                                            {!! Form::label('sort_field','Sort By') !!}
-                                            {!! Form::select('sort_field',array('created_at' => 'Date','name' => 'Name', 'member_code' => 'Member code', 'plan_name' => 'Plan name', 'status' => 'Status'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
+                                            {!! Form::label('sort_field','الترتيب حسب') !!}
+                                            {!! Form::select('sort_field',array('created_at' => 'التاريخ','name' => 'الاسم', 'member_code' => 'كود العضو', 'plan_name' => 'خطة الاشتراك', 'status' => 'الحالة'),old('sort_field'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_field']) !!}
                                         </div>
 
                                         <div class="col-sm-2">
-                                            {!! Form::label('sort_direction','Order') !!}
-                                            {!! Form::select('sort_direction',array('desc' => 'Descending','asc' => 'Ascending'),old('sort_direction'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_direction']) !!}</span>
+                                            {!! Form::label('sort_direction','الترتيب') !!}
+                                            {!! Form::select('sort_direction',array('desc' => 'تنازلي','asc' => 'تصاعدي'),old('sort_direction'),['class' => 'form-control selectpicker show-tick show-menu-arrow', 'id' => 'sort_direction']) !!}</span>
                                         </div>
 
                                         <div class="col-xs-3">
-                                            {!! Form::label('search','Keyword') !!}
+                                            {!! Form::label('search','كلمة البحث') !!}
                                             <input value="{{ old('search') }}" name="search" id="search" type="text" class="form-control padding-right-35"
                                                    placeholder="Search...">
                                         </div>
 
                                         <div class="col-xs-2">
                                             {!! Form::label('&nbsp;') !!} <br/>
-                                            <button type="submit" class="btn btn-primary active no-border">GO</button>
+                                            <button type="submit" class="btn btn-primary active no-border">بحث</button>
                                         </div>
 
                                         {!! Form::Close() !!}
@@ -77,19 +77,19 @@
                         <div class="panel-body bg-white">
 
                             @if($members->count() == 0)
-                                <h4 class="text-center padding-top-15">Sorry! No records found</h4>
+                                <h4 class="text-center padding-top-15">عذرا! لا يوجد بيانات</h4>
                             @else
                                 <table id="members" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Photo</th>
-                                        <th>Code</th>
-                                        <th>Name</th>
-                                        <th>Contact</th>
-                                        <th>Plan name</th>
-                                        <th>Member since</th>
-                                        <th>Status</th>
-                                        <th class="text-center">Actions</th>
+                                        <th>صورة</th>
+                                        <th>كود العضو</th>
+                                        <th>الاسم</th>
+                                        <th>رقم الهاتف</th>
+                                        <th>خطة الاشتراك</th>
+                                        <th>تاريخ الانضمام</th>
+                                        <th>الحالة</th>
+                                        <th class="text-center">عمليات</th>
                                     </tr>
                                     </thead>
 
@@ -116,7 +116,7 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-info">Actions</button>
+                                                    <button type="button" class="btn btn-info">عمليات</button>
                                                     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <span class="caret"></span>
                                                         <span class="sr-only">Toggle Dropdown</span>
@@ -124,18 +124,18 @@
                                                     <ul class="dropdown-menu" role="menu">
                                                         <li>
                                                             @permission(['manage-gymie','manage-members','view-member'])
-                                                            <a href="{{ action('MembersController@show',['id' => $member->id]) }}">View details</a>
+                                                            <a href="{{ action('MembersController@show',['id' => $member->id]) }}">عرض البيانات</a>
                                                             @endpermission
                                                         </li>
                                                         <li>
                                                             @permission(['manage-gymie','manage-members','edit-member'])
-                                                            <a href="{{ action('MembersController@edit',['id' => $member->id]) }}">Edit details</a>
+                                                            <a href="{{ action('MembersController@edit',['id' => $member->id]) }}">تعديل البيانات</a>
                                                             @endpermission
                                                         </li>
                                                         <li>
                                                             @permission(['manage-gymie','manage-members','delete-member'])
                                                             <a href="#" class="delete-record" data-delete-url="{{ url('members/'.$member->id.'/archive') }}"
-                                                               data-record-id="{{$member->id}}">Delete member</a>
+                                                               data-record-id="{{$member->id}}">حذف العضو</a>
                                                             @endpermission
                                                         </li>
                                                     </ul>

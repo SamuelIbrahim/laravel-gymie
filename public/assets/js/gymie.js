@@ -260,13 +260,13 @@ var gymie = (function ($) {
 				}
 				else {
 					swal({
-						title: "Are you sure?",
-						text: "Deleting this will also delete all its related records , do you still want to delete this record?",
+						title: "هل انت متأكد?",
+						text: "حذف هذا السجل يحذف ايضا السجلات المتعلقة به . هل انت متأكد من الحذف؟",
 						type: "warning",
 						showCancelButton: true,
 						showLoaderOnConfirm: true,
 						closeOnConfirm: false,
-						confirmButtonText: "Yes, delete it!",
+						confirmButtonText: "نعم. اود الحذف!",
 						confirmButtonColor: "#ec6c62"
 					}, function () {
 						$.ajax({
@@ -275,8 +275,8 @@ var gymie = (function ($) {
 						})
 							.done(function (data) {
 								swal({
-									title: "Deleted",
-									text: "Record has been successfully deleted",
+									title: "تم الحذف",
+									text: "هذا السجل تم حذفه بنجاح",
 									type: "success"
 								}, function () {
 									location.reload();
